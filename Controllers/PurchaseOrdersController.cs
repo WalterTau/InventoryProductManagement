@@ -1,4 +1,4 @@
-﻿using CashCrusadersFranchising.API.Models;
+﻿using CashCrusadersFranchising.Api.Data;
 using CashCrusadersFranchising.API.Service;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,10 +19,9 @@ namespace CashCrusadersFranchising.API.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(IEnumerable<PurchaseOrder>), 200)]
-        public async Task<IActionResult> Post(PurchaseOrder product)
+        public ActionResult Post(PurchaseOrder purchaseOrder)
         {
-            return View();
+            return Ok(_purchaseOrder.Add(purchaseOrder));
         }
 
         [HttpGet]

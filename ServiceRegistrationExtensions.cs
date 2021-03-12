@@ -20,6 +20,7 @@ namespace CashCrusadersFranchising.API
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<ISuppliersService, SuppliersService>();
             services.AddTransient<IUsers, UsersService>();
+            services.AddTransient<IEmployeesService, EmployeesService>();
             services.AddTransient<IPurchaseOrdersService, PurchaseOrdersService>();
         }
     }
