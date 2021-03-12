@@ -14,7 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CashCrusadersFranchising.Api.Data\CashCrusadersFranchising.Api.Data.csproj" />
+    <ProjectReference Include="..\..\InventoryProductManagement\CashCrusadersFranchising.Api.Data\CashCrusadersFranchising.Api.Data.csproj" />
+    <ProjectReference Include="..\CashCrusadersFranchising.API.Models\CashCrusadersFranchising.API.Models.csproj" />
     <ProjectReference Include="..\CashCrusadersFranchising.API.Service.Domain\CashCrusadersFranchising.API.Service.Domain.csproj" />
     <ProjectReference Include="..\CashCrusadersFranchising.API.Service\CashCrusadersFranchising.API.Service.csproj" />
   </ItemGroup>
