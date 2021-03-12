@@ -1,6 +1,7 @@
 ﻿using CashCrusadersFranchising.API.Models.Users;
 using CashCrusadersFranchising.API.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace CashCrusadersFranchising.API.Controllers
     public class UsersController : Controller
     {
         private IUsers _user;
-        public UsersController(IUsers user)
+        public UsersController(IUsers user )
         {
             this._user = user;
+            
         }
 
         // GET: api/<UserController>

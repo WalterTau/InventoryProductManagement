@@ -1,6 +1,7 @@
-﻿using CashCrusadersFranchising.API.Models;
+﻿using CashCrusadersFranchising.Api.Data;
 using CashCrusadersFranchising.API.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +14,17 @@ namespace CashCrusadersFranchising.API.Controllers
     public class ProductsController : Controller
     {
         private readonly IProductService _product;
+    
         public ProductsController(IProductService product)
         {
             this._product = product;
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(IEnumerable<Product>), 200)]
-        public async Task<IActionResult> Post(Product product)
+        public ActionResult Post(Product product)
         {
-            return View();
+           return Ok(_product.Add(product));
+           
         }
 
         [HttpGet]
